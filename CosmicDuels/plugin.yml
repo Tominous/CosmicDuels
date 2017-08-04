@@ -1,0 +1,7 @@
+name: CosmicDuels
+version: 1.0
+author: Puyodead1
+main: me.puyodead1.cosmicduels.Main
+commands:
+  duel: 
+    description: Main Command
