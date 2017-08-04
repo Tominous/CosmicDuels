@@ -1,6 +1,7 @@
 package me.puyodead1.cosmicduels.api;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -18,6 +19,24 @@ public class CosmicDuelsAPI {
 		Inventory inv = Bukkit.createInventory(owner, size, title);
 		player.openInventory(inv);
 
+		return inv;
+	}
+	
+	public static Inventory createDuelSettingsGUI(Player player) {
+		Inventory inv = createInventory(null, 27, "Duel Settings", player);
+		ItemStack goldenApple = new ItemStack(Material.GOLDEN_APPLE);
+		ItemMeta goldenAppleMeta = goldenApple.getItemMeta();
+		
+		goldenAppleMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&e&lGolden Apples"));
+		
+		ArrayList<String> goldenAppleLore = new ArrayList<String>();
+		goldenAppleLore.addAll(Arrays.asList("§a§lENABLED", "", "§7Click to §7§ntoggle§7 this setting."));
+		goldenAppleMeta.setLore(goldenAppleLore);
+		
+		goldenApple.setItemMeta(goldenAppleMeta);
+		
+		inv.setItem(0, goldenApple);
+		
 		return inv;
 	}
 
