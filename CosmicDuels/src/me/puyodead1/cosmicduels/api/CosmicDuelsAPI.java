@@ -23,6 +23,8 @@ public class CosmicDuelsAPI {
 
 	public static Inventory createMainDuelGUI(Player player) {
 		Inventory inv = createInventory(null, 9, "Duel Type", player);
+		
+		// RANKED DUEL ITEM
 		int inQueue = 0;
 		int ELO = 291;
 		String rank = "N/A";
@@ -41,7 +43,25 @@ public class CosmicDuelsAPI {
 		rankedMeta.setLore(rankedlore);
 
 		ranked.setItemMeta(rankedMeta);
+		//
+		
+		
+		//UNRANKED DUEL ITEM
+		ItemStack unranked = new ItemStack(Material.DIAMOND_CHESTPLATE);
+		ItemMeta unrankedMeta = unranked.getItemMeta();
+
+		unrankedMeta.setDisplayName(
+				ChatColor.translateAlternateColorCodes('&', "&a&lUnranked"));
+
+		ArrayList<String> unrankedlore = new ArrayList<String>();
+		unrankedlore.add(ChatColor.translateAlternateColorCodes('&', "&7Click to enter the Unranked Duel Queue."));
+		unrankedMeta.setLore(unrankedlore);
+
+		unranked.setItemMeta(unrankedMeta);
+		//
+		
 		inv.setItem(3, ranked);
+		inv.setItem(5, unranked);
 		return inv;
 	}
 
