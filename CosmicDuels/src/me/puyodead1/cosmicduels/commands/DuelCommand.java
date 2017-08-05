@@ -22,7 +22,7 @@ public class DuelCommand implements CommandExecutor {
 				}
 				if (args.length == 1) {
 					if (args[0].equalsIgnoreCase("godset")) {
-						//open godset customization
+						// open godset customization
 						return true;
 					}
 					if (args[0].equalsIgnoreCase("help")) {
@@ -53,6 +53,7 @@ public class DuelCommand implements CommandExecutor {
 						sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e/duel custom"));
 						sender.sendMessage(
 								ChatColor.translateAlternateColorCodes('&', "&7Customize your duel kit loadouts."));
+						return true;
 					}
 					if (args[0].equalsIgnoreCase("chatclear")) {
 						sender.sendMessage("");
@@ -76,19 +77,20 @@ public class DuelCommand implements CommandExecutor {
 						sender.sendMessage("");
 						sender.sendMessage("");
 						sender.sendMessage("");
+						return true;
 					}
-				} 
+				}
 				if (args.length == 1) {
 					Player player = Bukkit.getPlayerExact(args[0]);
 					if (!(player == null)) {
-						CosmicDuelsAPI.createDuelSettingsGUI(player);
-						//start invite process
+						Player playerSender = (Player) sender;
+						CosmicDuelsAPI.createDuelSettingsGUI(playerSender);
+						// start invite process
 					} else {
-						sender.sendMessage(ChatColor.RED + "Error: " + args[0]+ " is not a valid player!");
+						sender.sendMessage(ChatColor.RED + "Error: " + "'" + args[0] + "'" + " is not a valid player!");
 					}
 				}
-			}
-			else {
+			} else {
 				Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "Error: Only players can use that command!");
 			}
 		}

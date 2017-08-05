@@ -13,6 +13,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import me.puyodead1.cosmicduels.itemstacks.GlassPane;
 import me.puyodead1.cosmicduels.itemstacks.GoldenApple;
+import me.puyodead1.cosmicduels.itemstacks.Mcmmo;
 
 public class CosmicDuelsAPI {
 
@@ -34,12 +35,10 @@ public class CosmicDuelsAPI {
 	public static Inventory createDuelSettingsGUI(Player player) {
 		Inventory inv = createInventory(null, 27, "Duel Settings", player);
 
-		inv.setItem(0, new GlassPane().grayGlassPane());
-		inv.setItem(1, new GoldenApple().goldenAppleEnabled());
-		inv.setItem(8, new GlassPane().grayGlassPane());
+		inv.setItem(0, new GoldenApple().goldenAppleEnabled());
+		inv.setItem(1, new Mcmmo().mcmmoEnabled());	
 		inv.setItem(9, new GlassPane().grayGlassPane());
-		inv.setItem(10, new GlassPane().grayGlassPane());
-		inv.setItem(16, new GlassPane().grayGlassPane());
+		inv.setItem(13, new GlassPane().grayGlassPane());
 		inv.setItem(17, new GlassPane().grayGlassPane());
 		inv.setItem(19, new GlassPane().grayGlassPane());
 		inv.setItem(20, new GlassPane().grayGlassPane());
@@ -48,7 +47,6 @@ public class CosmicDuelsAPI {
 		inv.setItem(23, new GlassPane().grayGlassPane());
 		inv.setItem(24, new GlassPane().grayGlassPane());
 		inv.setItem(25, new GlassPane().grayGlassPane());
-
 		return inv;
 	}
 

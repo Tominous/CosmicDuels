@@ -23,7 +23,7 @@ public class DuelSettingsClickEvent implements Listener {
 					Player player = (Player) e.getWhoClicked();
 					GlassPane.stat = "§a§lON";
 					Inventory inv = CosmicDuelsAPI.createDuelSettingsGUI(player);
-					inv.setItem(1, new GoldenApple().goldenAppleEnabled());
+					inv.setItem(0, new GoldenApple().goldenAppleEnabled());
 					inv.setItem(22, new GlassPane().greenGlassPane());
 					player.openInventory(inv);
 					e.getWhoClicked().sendMessage(String.valueOf(goldenApplesToggled));
@@ -33,7 +33,7 @@ public class DuelSettingsClickEvent implements Listener {
 					Player player = (Player) e.getWhoClicked();
 					GlassPane.stat = "§c§lOFF";
 					Inventory inv = CosmicDuelsAPI.createDuelSettingsGUI(player);
-					inv.setItem(1, new GoldenApple().goldenAppleDisabled());
+					inv.setItem(0, new GoldenApple().goldenAppleDisabled());
 					inv.setItem(22, new GlassPane().greenGlassPane());
 					player.openInventory(inv);
 					e.getWhoClicked().sendMessage(String.valueOf(goldenApplesToggled));
