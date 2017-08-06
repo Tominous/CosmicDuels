@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import me.puyodead1.cosmicduels.commands.DuelCommand;
 import me.puyodead1.cosmicduels.events.DuelSettingsClickEvent;
+import me.puyodead1.cosmicduels.events.DuelTypeClickEvent;
 
 public class Main extends JavaPlugin {
 	
@@ -27,6 +28,7 @@ public class Main extends JavaPlugin {
 	
 	public void registerEvents() {
 		Bukkit.getPluginManager().registerEvents(new DuelSettingsClickEvent(), this);
+		Bukkit.getPluginManager().registerEvents(new DuelTypeClickEvent(), this);
 	}
 	
 	public void registerCommands() {

@@ -11,7 +11,6 @@ import me.puyodead1.cosmicduels.api.CosmicDuelsAPI;
 
 public class DuelCommand implements CommandExecutor {
 
-	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String CommandLabel, String[] args) {
 		if (cmd.getName().equalsIgnoreCase("duel")) {
 			if (sender instanceof Player) {
@@ -53,30 +52,6 @@ public class DuelCommand implements CommandExecutor {
 						sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e/duel custom"));
 						sender.sendMessage(
 								ChatColor.translateAlternateColorCodes('&', "&7Customize your duel kit loadouts."));
-						return true;
-					}
-					if (args[0].equalsIgnoreCase("chatclear")) {
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
-						sender.sendMessage("");
 						return true;
 					}
 				}

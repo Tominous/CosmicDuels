@@ -13,6 +13,8 @@ import net.md_5.bungee.api.ChatColor;
 
 public class Mcmmo {
 	
+	public static String lore = "§a§lENABLED";
+	
 	public ItemStack mcmmoEnabled() {
 		ItemStack mcmmo = new ItemStack(Material.DIAMOND_AXE);
 		ItemMeta mcmmoMeta = mcmmo.getItemMeta();
@@ -25,7 +27,7 @@ public class Mcmmo {
 		mcmmoMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&e&lMCMMO"));
 		
 		ArrayList<String> mcmmoLore = new ArrayList<String>();
-		mcmmoLore.addAll(Arrays.asList("§a§lENABLED", " ", "§7Click to §7§ntoggle§7 this setting."));
+		mcmmoLore.addAll(Arrays.asList(lore, " ", "§7Click to §7§ntoggle§7 this setting."));
 		
 		mcmmoMeta.setLore(mcmmoLore);
 		mcmmo.setItemMeta(mcmmoMeta);
@@ -45,7 +47,7 @@ public class Mcmmo {
 		mcmmoMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&e&lMCMMO"));
 		
 		ArrayList<String> mcmmoLore = new ArrayList<String>();
-		mcmmoLore.addAll(Arrays.asList("§c§lDISABLED", " ", "§7Click to §7§ntoggle§7 this setting."));
+		mcmmoLore.addAll(Arrays.asList(lore, " ", "§7Click to §7§ntoggle§7 this setting."));
 		
 		mcmmoMeta.setLore(mcmmoLore);
 		mcmmo.setItemMeta(mcmmoMeta);

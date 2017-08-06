@@ -12,18 +12,20 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class GoldenApple {
 	
+	public static String lore = "§a§lENABLED";
+	
 	public ItemStack goldenAppleEnabled() {
 		ItemStack goldenApple = new ItemStack(Material.GOLDEN_APPLE);
 		ItemMeta goldenAppleMeta = goldenApple.getItemMeta();
 		goldenAppleMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		goldenAppleMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		
-		goldenApple.addUnsafeEnchantment(Enchantment.ARROW_DAMAGE, 1);
+		goldenAppleMeta.addEnchant(Enchantment.DEPTH_STRIDER, 1, false);
 		
 		goldenAppleMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&e&lGolden Apples"));
 
 		ArrayList<String> goldenAppleLore = new ArrayList<String>();
-		goldenAppleLore.addAll(Arrays.asList("§a§lENABLED", "", "§7Click to §7§ntoggle§7 this setting."));
+		goldenAppleLore.addAll(Arrays.asList(lore, "", "§7Click to §7§ntoggle§7 this setting."));
 		goldenAppleMeta.setLore(goldenAppleLore);
 
 		goldenApple.setItemMeta(goldenAppleMeta);
@@ -36,10 +38,12 @@ public class GoldenApple {
 		goldenAppleMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		goldenAppleMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 		
+		goldenAppleMeta.addEnchant(Enchantment.DEPTH_STRIDER, 1, false);
+		
 		goldenAppleMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&e&lGolden Apples"));
 
 		ArrayList<String> goldenAppleLore = new ArrayList<String>();
-		goldenAppleLore.addAll(Arrays.asList("§c§lDISABLED", "§7Click to §7§ntoggle§7 this setting."));
+		goldenAppleLore.addAll(Arrays.asList(lore, "",  "§7Click to §7§ntoggle§7 this setting."));
 		goldenAppleMeta.setLore(goldenAppleLore);
 
 		goldenApple.setItemMeta(goldenAppleMeta);

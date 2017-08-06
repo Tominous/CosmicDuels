@@ -10,7 +10,11 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class GlassPane {
 	
 	public static ArrayList<String> paneLore;
-	public static String stat = "§a§lON";
+	public static String goldenAppleStat = "§a§lON";
+	public static String mcmmoStat = "§a§lON";
+	public static String potionsStat = "§a§lON";
+	public static String bowStat = "§a§lON";
+	public static String healingStat = "§a§lON";
 	
 	public ItemStack grayGlassPane() {
 		ItemStack pane = new ItemStack(Material.STAINED_GLASS_PANE, 1, (byte) 7);
@@ -27,7 +31,7 @@ public class GlassPane {
 		
 		paneMeta.setDisplayName("§e§lConfirm Settings");
 		paneLore = new ArrayList<String>();
-		paneLore.addAll(Arrays.asList(" ", "§eGolden Apples: " + stat));
+		paneLore.addAll(Arrays.asList(" ", "§eGolden Apples: " + goldenAppleStat, "§eMCMMO: " + mcmmoStat, "§ePotions: " + potionsStat, "§eBows: " + bowStat, "§eHealing: " + healingStat));
 		
 		paneMeta.setLore(paneLore);
 		

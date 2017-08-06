@@ -11,9 +11,12 @@ import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import me.puyodead1.cosmicduels.itemstacks.Bows;
 import me.puyodead1.cosmicduels.itemstacks.GlassPane;
 import me.puyodead1.cosmicduels.itemstacks.GoldenApple;
+import me.puyodead1.cosmicduels.itemstacks.Healing;
 import me.puyodead1.cosmicduels.itemstacks.Mcmmo;
+import me.puyodead1.cosmicduels.itemstacks.Potions;
 
 public class CosmicDuelsAPI {
 
@@ -37,6 +40,10 @@ public class CosmicDuelsAPI {
 
 		inv.setItem(0, new GoldenApple().goldenAppleEnabled());
 		inv.setItem(1, new Mcmmo().mcmmoEnabled());	
+		inv.setItem(2, new Potions().potionsEnabled());
+		inv.setItem(3, new Bows().bowsEnabled());
+		inv.setItem(4, new Healing().healingEnabled());
+		
 		inv.setItem(9, new GlassPane().grayGlassPane());
 		inv.setItem(13, new GlassPane().grayGlassPane());
 		inv.setItem(17, new GlassPane().grayGlassPane());
