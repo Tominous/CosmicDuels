@@ -11,17 +11,23 @@ import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import me.puyodead1.cosmicduels.itemstacks.Armor;
+import me.puyodead1.cosmicduels.itemstacks.Bounty;
 import me.puyodead1.cosmicduels.itemstacks.Bows;
+import me.puyodead1.cosmicduels.itemstacks.EnderPearls;
+import me.puyodead1.cosmicduels.itemstacks.FoodLoss;
 import me.puyodead1.cosmicduels.itemstacks.GlassPane;
 import me.puyodead1.cosmicduels.itemstacks.GoldenApple;
 import me.puyodead1.cosmicduels.itemstacks.Healing;
 import me.puyodead1.cosmicduels.itemstacks.Mcmmo;
 import me.puyodead1.cosmicduels.itemstacks.Potions;
+import me.puyodead1.cosmicduels.itemstacks.RiskInventory;
+import me.puyodead1.cosmicduels.itemstacks.Weapons;
 
 public class CosmicDuelsAPI {
 
 	public static ArrayList<String> goldenAppleLore;
-	
+
 	public static Inventory createInventory(InventoryHolder owner, int size, String title, Player player) {
 		Inventory inv = Bukkit.createInventory(owner, size, title);
 		player.openInventory(inv);
@@ -39,11 +45,17 @@ public class CosmicDuelsAPI {
 		Inventory inv = createInventory(null, 27, "Duel Settings", player);
 
 		inv.setItem(0, new GoldenApple().goldenAppleEnabled());
-		inv.setItem(1, new Mcmmo().mcmmoEnabled());	
+		inv.setItem(1, new Mcmmo().mcmmoEnabled());
 		inv.setItem(2, new Potions().potionsEnabled());
 		inv.setItem(3, new Bows().bowsEnabled());
 		inv.setItem(4, new Healing().healingEnabled());
-		
+		inv.setItem(5, new FoodLoss().foodLossEnabled());
+		inv.setItem(6, new EnderPearls().enderPearlsEnabled());
+		inv.setItem(7, new RiskInventory().riskInventoryDisabled());
+		inv.setItem(8, new Bounty().bountyDisabled());
+		inv.setItem(10, new Armor().armorEnabled());
+		inv.setItem(11, new Weapons().weaponsEnabled());
+
 		inv.setItem(9, new GlassPane().grayGlassPane());
 		inv.setItem(13, new GlassPane().grayGlassPane());
 		inv.setItem(17, new GlassPane().grayGlassPane());

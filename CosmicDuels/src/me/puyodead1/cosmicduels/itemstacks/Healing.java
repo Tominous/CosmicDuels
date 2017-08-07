@@ -24,7 +24,7 @@ public static String lore = "§a§lENABLED";
 		
 		healingMeta.addEnchant(Enchantment.ARROW_DAMAGE, 1, true);
 		
-		healingMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&e&lhealing"));
+		healingMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&e&lHealing"));
 		
 		ArrayList<String> healingLore = new ArrayList<String>();
 		healingLore.addAll(Arrays.asList(lore, " ", "§7Click to §7§ntoggle§7 this setting."));
